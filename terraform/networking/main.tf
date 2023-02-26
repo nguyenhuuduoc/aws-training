@@ -60,27 +60,27 @@ module "vpc" {
 # ------------------------------------------------------------------------------
 # VPC endpoints
 # ------------------------------------------------------------------------------
-module "vpc-endpoints" {
-  source = "./modules/vpc-endpoints"
+# module "vpc-endpoints" {
+#   source = "./modules/vpc-endpoints"
 
-  region = var.region
-  cidr   = var.cidr
+#   region = var.region
+#   cidr   = var.cidr
 
-  vpc_name                 = module.vpc.name
-  vpc_id                   = module.vpc.vpc_id
-  public_route_table_ids   = module.vpc.public_route_table_ids
-  private_route_table_ids  = module.vpc.private_route_table_ids
-  database_route_table_ids = module.vpc.database_route_table_ids
-  private_subnets          = module.vpc.private_subnets
+#   vpc_name                 = module.vpc.name
+#   vpc_id                   = module.vpc.vpc_id
+#   public_route_table_ids   = module.vpc.public_route_table_ids
+#   private_route_table_ids  = module.vpc.private_route_table_ids
+#   database_route_table_ids = module.vpc.database_route_table_ids
+#   private_subnets          = module.vpc.private_subnets
 
-  vpce_sg_name              = var.vpce_sg_name
-  s3_endpoint_name          = var.s3_endpoint_name
-  ssm_endpoint_name         = var.ssm_endpoint_name
-  ec2messages_endpoint_name = var.ec2messages_endpoint_name
-  ssmmessages_endpoint_name = var.ssmmessages_endpoint_name
+#   vpce_sg_name              = var.vpce_sg_name
+#   s3_endpoint_name          = var.s3_endpoint_name
+#   ssm_endpoint_name         = var.ssm_endpoint_name
+#   ec2messages_endpoint_name = var.ec2messages_endpoint_name
+#   ssmmessages_endpoint_name = var.ssmmessages_endpoint_name
 
-  depends_on = [
-    module.vpc
-  ]
-}
+#   depends_on = [
+#     module.vpc
+#   ]
+# }
 
