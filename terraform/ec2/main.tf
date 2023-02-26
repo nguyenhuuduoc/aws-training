@@ -54,10 +54,10 @@ resource "aws_iam_instance_profile" "app" {
 resource "aws_instance" "app" {
     ami                                  = "ami-0dfcb1ef8550277af"
     availability_zone                    = "us-east-1a"
-    subnet_id                            = "subnet-0d371e8f3022f9eaf"
+    subnet_id                            = "subnet-02cb15e29cfe58d1d"
     instance_type                        = "t2.micro"
     monitoring                           = false
-    associate_public_ip_address          = true
+    associate_public_ip_address          = false
     iam_instance_profile                 = aws_iam_instance_profile.app.name
     vpc_security_group_ids               = [
         aws_security_group.app.id,
