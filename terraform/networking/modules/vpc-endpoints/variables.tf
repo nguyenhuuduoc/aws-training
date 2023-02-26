@@ -1,0 +1,13 @@
+variable "region" {}
+variable "cidr" {}
+variable "vpc_name" {}
+variable "vpc_id" {}
+variable "public_route_table_ids" {}
+variable "private_route_table_ids" {}
+variable "database_route_table_ids" {}
+variable "private_subnets" {}
+variable "vpce_sg_name" {}
+variable "s3_endpoint_name" {}
+variable "ssm_endpoint_name" {}
+variable "ec2messages_endpoint_name" {}
+variable "ssmmessages_endpoint_name" {}
